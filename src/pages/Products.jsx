@@ -19,8 +19,8 @@ const Products = () => {
 
                 <div className="mt-40 grid gap-x-5 gap-y-15 grid-cols-2 sm:gap-x-10 sm:gap-y-25  lg:grid-cols-3 lg:gap-y-35">
                     {productsList.map(list => (
-                        <div key={list.name} className="relative rounded-3xl bg-bg-secondary p-5 pt-10  sm:pt-15 lg:pt-20">
-                            <img src={list.img} alt={list.name} className='absolute w-25 left-1/2 -translate-x-1/2 -top-10 sm:-top-20 lg:-top-25 sm:w-40 lg:w-50' />
+                        <div key={list.name} className="relative group rounded-3xl bg-bg-secondary p-5 pt-10  sm:pt-15 lg:pt-20">
+                            <img src={list.img} alt={list.name} className='transition-transform duration-200 group-hover:-translate-y-2 absolute w-25 left-1/2 -translate-x-1/2 -top-10 sm:-top-20 lg:-top-25 sm:w-40 lg:w-50' />
                             <div className="mt-5">
                                 <p className="text-xl font-bold text-center italic sm:text-2xl lg:text-3xl">
                                     {list.name} <br />Pizza

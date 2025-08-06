@@ -8,7 +8,7 @@ const navLinks = [
   { href: '#popular', name: 'Popular' },
   { href: '#ingredients', name: 'Ingredients' },
   { href: '#products', name: 'Products' },
-  { href: '#contact', name: 'contact' },
+  { href: '#contact', name: 'Contact' },
 ]
 
 const Navbar = () => {

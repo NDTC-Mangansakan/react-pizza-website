@@ -6,6 +6,7 @@ const navLinks = [
   { href: '#home', name: 'Home' },
   { href: '#about', name: 'About Us' },
   { href: '#popular', name: 'Popular' },
+  { href: '#ingredients', name: 'Ingredients' },
   { href: '#products', name: 'Products' },
   { href: '#contact', name: 'contact' },
 ]
@@ -34,7 +35,7 @@ const Navbar = () => {
           {/* nav links for md - sm devices */}
           <div className={`bg-bg-secondary fixed top-0 right-0 h-[100vh] w-[250px] flex flex-col gap-10 pl-5 pt-20 transition-transform duration-300 ${openNav ? 'translate-x-0' : 'translate-x-[250px]'} lg:hidden`}>
             {navLinks.map(link => (
-              <a key={link.href} href={link.href} className='font-semibold text-2xl'>{link.name}</a>
+              <a key={link.href} href={link.href} className='font-semibold text-2xl' onClick={handleOpenNav}>{link.name}</a>
             ))}
             <div className="span cursor-pointer absolute top-5 right-5" onClick={handleOpenNav}>
               <RiCloseFill size={30}/>

@@ -6,6 +6,11 @@
   --color-bg-secondary:oklch(98.7% 0.022 95.277);
 }
 
+html{
+    scroll-padding-top: 10vh;
+    scroll-behavior: smooth;
+}
+
 body{
     overflow-x: hidden
 }
@@ -33,4 +38,8 @@ body{
 
 @utility btn{
     @apply px-5 py-3 rounded-3xl bg-primary text-white font-semibold;
+}
+
+@utility section-title{
+    @apply text-2xl sm:text-3xl lg:text-4xl font-extrabold italic;
 }

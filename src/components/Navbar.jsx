@@ -17,7 +17,7 @@ const Navbar = () => {
     setOpenNav(prev => !prev)
   }
   return (
-    <nav className='sticky top-0 right-0 left-0 h-[10vh] flex items-center bg-bg-primary'>
+    <nav className='sticky top-0 right-0 left-0 h-[10vh] flex items-center bg-bg-primary z-99'>
       <div className="custom-container">
         <div className="flex justify-between items-center">
           {/* Logo */}

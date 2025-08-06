@@ -1,7 +1,9 @@
 @import 'tailwindcss';
 
 @theme{
-  --color-primary:;
+  --color-primary:#fb2c36;
+  --color-bg-primary:#fef3c6;
+  --color-bg-secondary:oklch(98.7% 0.022 95.277);
 }
 
 .custom-container {

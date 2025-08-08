@@ -1,6 +1,6 @@
 import { RiCloseFill, RiMenuFill } from '@remixicon/react'
 import logo from '../assets/img/logo-pizza.svg'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const navLinks = [
   { href: '#home', name: 'Home' },
@@ -13,8 +13,35 @@ const navLinks = [
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false)
+  const [activeSection, setActiveSection] = useState("");
 
-  function handleOpenNav(){
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-50% 0px -50% 0px', // triggers when section is around middle
+      threshold: 0,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveSection(`#${entry.target.id}`);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe all sections
+    navLinks.forEach(item => {
+      const section = document.querySelector(item.href);
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  function handleOpenNav() {
     setOpenNav(prev => !prev)
   }
   return (
@@ -35,17 +62,17 @@ const Navbar = () => {
           {/* nav links for md - sm devices */}
           <div className={`bg-bg-secondary fixed top-0 right-0 h-[100vh] w-[250px] flex flex-col gap-10 pl-5 pt-20 transition-transform duration-300 ${openNav ? 'translate-x-0' : 'translate-x-[250px]'} lg:hidden`}>
             {navLinks.map(link => (
-              <a key={link.href} href={link.href} className='font-semibold text-2xl' onClick={handleOpenNav}>{link.name}</a>
+              <a key={link.href} href={link.href} className={`${activeSection == link.href ? 'text-primary' : 'text-black'} font-semibold text-2xl`} onClick={handleOpenNav}>{link.name}</a>
             ))}
             <div className="span cursor-pointer absolute top-5 right-5" onClick={handleOpenNav}>
-              <RiCloseFill size={30}/>
+              <RiCloseFill size={30} />
             </div>
           </div>
 
           {/* nav links for lg and above devices */}
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden font-semibold lg:flex items-center gap-10">
             {navLinks.map(link => (
-              <a key={link.href} href={link.href} className=''>{link.name}</a>
+              <a key={link.href} href={link.href} className={`${activeSection == link.href ? 'text-primary' : 'text-black'}`}>{link.name}</a>
             ))}
           </div>
         </div>

@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className="mt-15 flex justify-center items-center gap-1 text-gray-600">
+      <p className="mt-15 text-sm flex justify-center items-center gap-1 text-gray-600">
         <RiCopyrightLine size={15}/> All Rights Reserved by Ishaq Mangansakan
       </p>
     </footer>

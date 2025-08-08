@@ -6,6 +6,7 @@ import About from './pages/About'
 import Ingredients from './pages/Ingredients'
 import Products from './pages/Products'
 import Contact from './pages/Contact'
+import Popular from './pages/Popular'
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
       <Navbar/>
       <Home/>
       <About/>
-
+      <Popular/>
       <Ingredients/>
       <Products/>
       <Contact/>

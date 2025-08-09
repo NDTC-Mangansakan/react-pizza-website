@@ -7,6 +7,10 @@ import Ingredients from './pages/Ingredients'
 import Products from './pages/Products'
 import Contact from './pages/Contact'
 import Popular from './pages/Popular'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const App = () => {
   return (

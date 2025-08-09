@@ -7,6 +7,7 @@ import popularPizza2 from '../assets/img/popular-2.png'
 import popularPizza3 from '../assets/img/popular-3.png'
 import pizzaBoard from '../assets/img/popular-dish.png'
 
+
 const pizzaInfo = [
   { name: 'Marghareta', img: popularPizza1 },
   { name: 'Pepperoni', img: popularPizza2 },
@@ -33,7 +34,7 @@ const Popular = () => {
             slidesPerView='auto'
             grabCursor={true}
             autoplay={{
-              delay: 1500, // 3 seconds between slides
+              delay: 2000, // 3 seconds between slides
               disableOnInteraction: false, // Continue autoplay after user interaction
               pauseOnMouseEnter: true, // Pause on hover
             }}

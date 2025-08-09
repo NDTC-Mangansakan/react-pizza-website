@@ -1,8 +1,10 @@
+import { useGSAP } from '@gsap/react'
 import product1 from '../assets/img/product-1.png'
 import product2 from '../assets/img/product-2.png'
 import product3 from '../assets/img/product-3.png'
 import product4 from '../assets/img/product-4.png'
 import product5 from '../assets/img/product-5.png'
+import gsap from 'gsap'
 
 const productsList = [
     { name: 'Vegeterian', price: '$15', img: product1 },
@@ -12,6 +14,10 @@ const productsList = [
     { name: 'Italian', price: '$10', img: product5 },
 ]
 const Products = () => {
+
+    useGSAP(() => {
+        gsap.from('.products-card', { scrollTrigger: { trigger: '#products', start: 'top 50%'}, y: 30, opacity: 0, delay: .3, stagger: .2 })
+    }, [])
     return (
         <section id='products' className='py-10 bg-bg-primary'>
             <div className="w-[320px] px-5 mx-auto sm:w-[640px] lg:w-[1024px]">
@@ -19,7 +25,7 @@ const Products = () => {
 
                 <div className="mt-15 sm:mt-30 lg:mt-40 grid gap-x-5 gap-y-15 grid-cols-2 sm:gap-x-10 sm:gap-y-25  lg:grid-cols-3 lg:gap-y-35">
                     {productsList.map(list => (
-                        <div key={list.name} className="relative group rounded-3xl bg-bg-secondary p-5 pt-10  sm:pt-15 lg:pt-20">
+                        <div key={list.name} className="products-card relative group rounded-3xl bg-bg-secondary p-5 pt-10  sm:pt-15 lg:pt-20">
                             <img src={list.img} alt={list.name} className='transition-transform duration-200 group-hover:-translate-y-2 absolute w-25 left-1/2 -translate-x-1/2 -top-10 sm:-top-20 lg:-top-25 sm:w-40 lg:w-50' />
                             <div className="mt-5">
                                 <p className="text-xl font-bold text-center italic sm:text-2xl lg:text-3xl">

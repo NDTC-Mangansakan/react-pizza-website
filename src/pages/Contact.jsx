@@ -4,14 +4,41 @@ import sticker2 from '../assets/img/sticker-onion.svg'
 import sticker3 from '../assets/img/sticker-mushroom.svg'
 import { RiMapFill, RiMapPinFill, RiMessengerFill, RiSendPlaneFill, RiWhatsappFill } from '@remixicon/react'
 
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+
 const Contact = () => {
+
+    useGSAP(() => {
+        gsap.from('#contact-data', {
+            scrollTrigger: {
+                trigger: '#contact',
+                start: 'top 80%',
+            },
+            x: -50,
+            opacity: 0,
+            delay: .3,
+            duration: 1
+        })
+
+        gsap.from('#contact-img', {
+            scrollTrigger: {
+                trigger: '#contact',
+                start: 'top 80%',
+            },
+            x: 50,
+            opacity: 0,
+            delay: .3,
+            duration: 1
+        })
+    }, [])
     return (
         <section id='contact' className='py-10 bg-bg-primary'>
             <div className="custom-container">
 
                 <div className="flex flex-col items-center justify-center gap-5 py-10 rounded-4xl bg-amber-950 lg:flex-row">
                     {/* contact img */}
-                    <div className="relative lg:w-1/2">
+                    <div id='contact-img' className="relative lg:w-1/2">
                         <img src={contactImg} alt="contact image" className='w-50 mx-auto sm:w-60 lg:w-80'/>
 
                         <img src={sticker1} alt="sticker 1" className='w-10 absolute top-0 lg:left-15 lg:w-15' />
@@ -19,7 +46,7 @@ const Contact = () => {
                     </div>
 
                     {/* Contact Data */}
-                    <div className="relative text-white lg:w-1/2">
+                    <div id='contact-data' className="relative text-white lg:w-1/2">
                         <p className="section-title text-center lg:text-start">
                             Contact Now
                         </p>

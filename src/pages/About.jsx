@@ -1,5 +1,5 @@
 import { useGSAP } from '@gsap/react'
-import aboutImg from '../assets/img/about-img.png'
+import aboutImg from '../assets/img/about-img-1.webp'
 import gsap from 'gsap'
 
 const About = () => {

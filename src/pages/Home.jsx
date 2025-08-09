@@ -1,5 +1,5 @@
-import homeBoardImg from '../assets/img/home-board.png'
-import homePizza from '../assets/img/home-pizza.png'
+import homeBoardImg from '../assets/img/home-board.webp'
+import homePizza from '../assets/img/home-pizza.webp'
 
 import homeTomato from '../assets/img/home-tomato.png'
 import homeLeaf1 from '../assets/img/home-leaf-1.png'

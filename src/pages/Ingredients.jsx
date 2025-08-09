@@ -1,4 +1,4 @@
-import IngredientsImg from '../assets/img/recipe-img.png'
+import IngredientsImg from '../assets/img/recipe-img.webp'
 import IngFlour from '../assets/img/recipe-flour.png'
 import IngCheese from '../assets/img/recipe-cheese.png'
 import IngTomato from '../assets/img/recipe-tomato.png'

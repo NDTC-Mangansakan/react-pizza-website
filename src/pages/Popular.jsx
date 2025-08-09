@@ -2,10 +2,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Autoplay } from 'swiper/modules' // Add Autoplay import
 import 'swiper/css'
 import 'swiper/css/navigation'
-import popularPizza1 from '../assets/img/popular-1.png'
-import popularPizza2 from '../assets/img/popular-2.png'
-import popularPizza3 from '../assets/img/popular-3.png'
-import pizzaBoard from '../assets/img/popular-dish.png'
+import popularPizza1 from '../assets/img/popular-1.webp'
+import popularPizza2 from '../assets/img/popular-2.webp'
+import popularPizza3 from '../assets/img/popular-3.webp'
+import pizzaBoard from '../assets/img/popular-dish.webp'
 
 
 const pizzaInfo = [

@@ -1,9 +1,9 @@
 import { useGSAP } from '@gsap/react'
-import product1 from '../assets/img/product-1.png'
-import product2 from '../assets/img/product-2.png'
-import product3 from '../assets/img/product-3.png'
-import product4 from '../assets/img/product-4.png'
-import product5 from '../assets/img/product-5.png'
+import product1 from '../assets/img/product-1.webp'
+import product2 from '../assets/img/product-2.webp'
+import product3 from '../assets/img/product-3.webp'
+import product4 from '../assets/img/product-4.webp'
+import product5 from '../assets/img/product-5.webp'
 import gsap from 'gsap'
 
 const productsList = [

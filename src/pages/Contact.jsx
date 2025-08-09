@@ -1,8 +1,8 @@
-import contactImg from '../assets/img/contact-img.png'
+import contactImg from '../assets/img/contact-img.webp'
 import sticker1 from '../assets/img/sticker-tomato.svg'
 import sticker2 from '../assets/img/sticker-onion.svg'
 import sticker3 from '../assets/img/sticker-mushroom.svg'
-import { RiMapFill, RiMapPinFill, RiMessengerFill, RiSendPlaneFill, RiWhatsappFill } from '@remixicon/react'
+import { RiMapPinFill, RiMessengerFill, RiSendPlaneFill, RiWhatsappFill } from '@remixicon/react'
 
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'

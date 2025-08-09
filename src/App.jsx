@@ -9,20 +9,23 @@ import Contact from './pages/Contact'
 import Popular from './pages/Popular'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
+import LoadingWrapper from './components/LoadingWrapper'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const App = () => {
   return (
     <>
-      <Navbar/>
-      <Home/>
-      <About/>
-      <Popular/>
-      <Ingredients/>
-      <Products/>
-      <Contact/>
-      <Footer/>
+      <LoadingWrapper>
+        <Navbar />
+        <Home />
+        <About />
+        <Popular />
+        <Ingredients />
+        <Products />
+        <Contact />
+        <Footer />
+      </LoadingWrapper>
     </>
   )
 }

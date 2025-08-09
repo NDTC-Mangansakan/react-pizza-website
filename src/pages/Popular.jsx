@@ -43,7 +43,7 @@ const Popular = () => {
               <SwiperSlide key={pizza.name}>
                 {({ isActive }) => (
                   <>
-                    <img src={pizza.img} alt={pizza.name} className={`${isActive ? 'rotate-0 scale-100' : 'rotate-360 scale-60'} transition-transform duration-500 w-[220px] mx-auto`} />
+                    <img src={pizza.img} alt={pizza.name} className={`${isActive ? 'rotate-0 scale-100' : 'rotate-360 scale-60'} transition-transform duration-500 w-[220px] sm:w-[265px] lg:w-[310px] mx-auto`} />
                     <p className="text-center text-primary text-xl font-bold italic mt-5">{pizza.name} Pizza</p>
                   </>
                 )}
@@ -51,7 +51,7 @@ const Popular = () => {
             ))}
           </Swiper>
           <div className="absolute -top-5">
-            <img src={pizzaBoard} alt="Pizza Board" className='w-[250px] mx-auto' />
+            <img src={pizzaBoard} alt="Pizza Board" className='w-[250px] sm:w-[300px] lg:w-[350px] mx-auto' />
           </div>
         </div>
       </div>
